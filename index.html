@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calamardo</title>
+
+  <style>
+    :root {
+      --color-calamardo: #b8d1c8;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      width: 100%;
+      display: flex;
+    }
+
+    .calamardo {
+      margin: auto;
+      filter: drop-shadow(0 0 .3125rem);
+    }
+
+    .head {
+      width: 15.625rem;
+      height: 9.375rem;
+      background-color: var(--color-calamardo);
+      border-radius: 50%;
+      border: .125rem solid currentColor;
+      position: relative;
+    }
+
+    .head::before {
+      content: '';
+      width: 7.0625rem;
+      height: 4.375rem;
+      background-color: var(--color-calamardo);
+      position: absolute;
+      border: .125rem solid currentColor;
+      bottom: -4.0625rem;
+      left: 50%;
+      transform: translate(-50%);
+      border-top: transparent;
+    }
+
+    .eye {
+      width: 3.125rem;
+      height: 5.625rem;
+      background-color: #fff;
+      border-radius: 50%;
+      border: .125rem solid currentColor;
+      position: absolute;
+      left: 4.625rem;
+      top: 4.625rem;
+      background-image: linear-gradient(#b2cdc4 47%, #000 50%, #000 50%, #fefcc9 50%);
+      z-index: 100;
+    }
+
+    .eye::before {
+      content: '';
+      width: .9375rem;
+      height: 1.5625rem;
+      position: absolute;
+      background-image: linear-gradient(transparent 20%, #8a1e05 20%);
+      border-radius: 50%;
+      top: 2.375rem;
+      left: 50%;
+      transform: translate(-50%);
+    }
+
+    .eye--r {
+      left: initial;
+      right: 4.625rem;
+    }
+
+    .eyebrow {
+      width: 3.125rem;
+      height: 1.25rem;
+      border-bottom: .25rem solid currentColor;
+      border-radius: 50%;
+      position: absolute;
+      top: 3.625rem;
+      left: 4.4375rem;
+      z-index: 200;
+    }
+
+    .eyebrow--r {
+      left: initial;
+      top: 3.1875rem;
+      right: 4.0625rem;
+      border-bottom: 0;
+      border-top: .25rem solid currentColor;
+      transform: rotate(7deg);
+    }
+
+    .nose {
+      width: 3.125rem;
+      height: 6.25rem;
+      background-color: var(--color-calamardo);
+      border: .125rem solid currentColor;
+      border-radius: 50%;
+      position: absolute;
+      top: 8.375rem;
+      left: 50%;
+      transform: translate(-50%);
+      z-index: 50;
+    }
+
+    .mouth {
+      width: 11.25rem;
+      height: 2.5rem;
+      background-color: var(--color-calamardo);
+      border: .125rem solid currentColor;
+      position: absolute;
+      top: 11.875rem;
+      left: 50%;
+      transform: translate(-50%);
+      border-radius: 1.25rem;
+    }
+
+    .mouth::before {
+      content: '';
+      background-color: var(--color-calamardo);
+      width: 7.0625rem;
+      height: 3.125rem;
+      position: absolute;
+      bottom: 0;
+      left: 2rem;
+    }
+
+    .mouth::after {
+      content: '';
+      width: 8.4375rem;
+      height: .125rem;
+      background-color: #000;
+      position: absolute;
+      top: 1.25rem;
+      left: 50%;
+      transform: translate(-50%);
+    }
+
+    .mouth--end{
+      width: 1.25rem;
+      height: 1.25rem;
+      border-left: .125rem solid currentColor;
+      border-radius: 50%;
+      position: absolute;
+      top: .5625rem;
+      left: 1.1875rem;
+    }
+
+    .mouth--end--r {
+      left: initial;
+      right: 1.1875rem;
+      border-left: 0;
+      border-right: .125rem solid currentColor;
+    }
+
+    .hair{
+      width: .875rem;
+      height: .5625rem;
+      background-color: #22584d;
+      border-radius: 50%;
+      position: absolute;
+      top: 2.5rem;
+      left: 1.25rem;
+      color: #22584d;
+      box-shadow: 1.25rem -0.9375rem, 5rem -1.875rem, 6.25rem -0.9375rem, 12.5rem 1.875rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="calamardo">
+    <div class="head">
+
+      <div class="hair"></div>
+
+      <div class="eyebrow"></div>
+      <div class="eyebrow eyebrow--r"></div>
+
+      <div class="eye"></div>
+      <div class="eye eye--r"></div>
+
+      <div class="nose"></div>
+
+      <div class="mouth">
+        <div class="mouth--end"></div>
+        <div class="mouth--end mouth--end--r"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
